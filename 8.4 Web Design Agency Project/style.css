@@ -44,8 +44,9 @@ footer {
   }
   .card {
     width:100%;
-    display: both;
+    display: block;
     margin-bottom: 30px;
+    text-align: justify;
   }
   .card img{
     margin-bottom: 10px;
