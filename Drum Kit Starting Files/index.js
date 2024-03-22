@@ -1,11 +1,20 @@
 var numberOfDrums = document.querySelectorAll(".drum").length;
 
+// detecting button press by touch
   for(var i = 0 ; i < numberOfDrums; i++){
      document.querySelectorAll(".drum")[i].addEventListener("click",function () {
      
       var innerButton = this.innerHTML  // this is used to know addeventlistener clicked
 
-     switch (innerButton) {
+  })
+}
+// detecting button press by key
+  document.addEventListener("keydown",function(event){
+
+    makeSound(event.key); // by event.key i know which key pressed
+  });
+  function makeSound(key){
+    switch (key) {
       case "w":
             var audio = new Audio('./sounds/tom-1.mp3');
             audio.play()
@@ -39,6 +48,6 @@ var numberOfDrums = document.querySelectorAll(".drum").length;
         console.log(this.innerHTML);
         break;
      }
-  })
-}
+  }
+
 
