@@ -5,13 +5,15 @@ var numberOfDrums = document.querySelectorAll(".drum").length;
      document.querySelectorAll(".drum")[i].addEventListener("click",function () {
      
       var innerButton = this.innerHTML  // this is used to know addeventlistener clicked
-
+      makeSound(innerButton);
+      addAnimation(innerButton)
   })
 }
 // detecting button press by key
   document.addEventListener("keydown",function(event){
 
     makeSound(event.key); // by event.key i know which key pressed
+    addAnimation(event.key)
   });
   function makeSound(key){
     switch (key) {
@@ -48,6 +50,16 @@ var numberOfDrums = document.querySelectorAll(".drum").length;
         console.log(this.innerHTML);
         break;
      }
+  }
+
+  function addAnimation (currentKey){ // currentkey like a , w, s ,d , j,k,l
+    var activeButton = document.querySelector("."+ currentKey);
+
+    activeButton.classList.add("pressed");
+
+    setTimeout(function(){
+      activeButton.classList.remove("pressed");
+    },100)
   }
 
 
