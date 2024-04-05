@@ -9,7 +9,7 @@
 
 <body>
   <!-- Write your code here -->
-  <% if (locals.WordInLetter){%>
+  <% if (locals.WordInLetter){%>  <%# locals is used to check local that WordInLetter exist with it WordInLetter not defined %>
     <h1>The letter in your name is <%= WordInLetter %></h1>
   <%} else {%>
     <h1>Enter your Name</h1>
