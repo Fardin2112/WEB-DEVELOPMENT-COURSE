@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
     var Theday="";
     var dayAdvice="";
 
-    console.log(day);
+    //console.log(day);
     switch (day) {
             case 0: Theday = "Sunday";
                 dayAdvice = "It's weekday rest less work hard on yourself"
