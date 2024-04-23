@@ -12,7 +12,7 @@ const port = 3000;
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));  // its not important bec we dont need any value from req
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
